@@ -9,10 +9,9 @@ csvpath = os.path.join('Resources', 'election_data.csv')
 
 print('Election Results')
 print("----------------------------")
+def totalvotes():
+    with open(csvpath) as csv_file:
 
-#open csv
-with open(csvpath) as csv_file:
-        #call csv reader
         csv_reader = csv.reader(csv_file,delimiter=',') 
 
         csv_header = next(csv_reader)
@@ -21,3 +20,7 @@ with open(csvpath) as csv_file:
 
         print("Total Votes: ",  
             total_votes)
+
+
+totalvotes()
+
